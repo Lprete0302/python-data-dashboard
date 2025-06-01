@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV Dashboard</title>
+</head>
+<body>
+  <h1>CSV Data Dashboard</h1>
+
+  <!-- 🔼 Upload Form -->
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="csv_file">Upload CSV:</label>
+    <input type="file" name="csv_file" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <hr>
+
+  <!-- Add your stats & graph below -->
+  <h2>Summary:</h2>
+  <p>{{ summary }}</p>
+
+  <h2>Score Graph:</h2>
+  <img src="{{ url_for('graph') }}" alt="Score Chart">
+</body>
+</html>
