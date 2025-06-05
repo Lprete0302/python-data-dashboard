@@ -63,6 +63,9 @@ def show_graph():
     ax.set_xlabel('Name')
     ax.set_ylabel('Score')
 
+    # 🔧 Ensure static directory exists
+    os.makedirs('static', exist_ok=True)
+
     # Save for download
     fig.tight_layout()
     fig.savefig('static/score_chart.png')
@@ -80,4 +83,3 @@ def download_graph():
 
 if __name__ == '__main__':
     app.run(debug=True)
-    
